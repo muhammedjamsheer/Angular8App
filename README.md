@@ -50,4 +50,50 @@ We can also use the styles.css file to add the CSS file of Bootstrap to our proj
 @import "~bootstrap/dist/css/bootstrap.css"
 ```
 
+## Toaster Notification in Angular 8
+#### Step 1 : Install Toastr
+ ```html
+  npm install ngx-toastr@11.3.3 
+```
+ ```html
+  npm install @angular/animations --save
+```
+#### Step 1 : Install Toastr
+Open the angular.json file of your project and include:
+ ```html
+ .....
+  "styles": [
+    "node_modules/ngx-toastr/toastr.css",
+    "src/styles.css"
+  ],
+.....
+```
+
+#### Step 2 : Import Module
+In this step, we need to import ToastrModule and BrowserAnimationsModule to app.module.ts file
+###### src/app/app.module.ts
+ ```html
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+  
+import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+  
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+
+
 

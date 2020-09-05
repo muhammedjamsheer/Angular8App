@@ -58,7 +58,6 @@ We can also use the styles.css file to add the CSS file of Bootstrap to our proj
  ```html
   npm install @angular/animations --save
 ```
-#### Step 1 : Install Toastr
 Open the angular.json file of your project and include:
  ```html
  .....
@@ -95,5 +94,34 @@ import { ToastrModule } from 'ngx-toastr';
 export class AppModule { }
 ```
 
+#### Step 3 : Create Service for Notification
 
+Here, we will create separate notification for Toastr. so you can use showSuccess(), showError(), showInfo() and showWarning() in any component.
+
+###### src/app/notification.service.ts
+  ```html
+import { Injectable } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class NotificationService {
+  
+  constructor(private toastr: ToastrService) { }
+  
+  showSuccess(message, title){
+      this.toastr.success(message, title)
+  }
+  showError(message, title){
+      this.toastr.error(message, title)
+  }
+  showInfo(message, title){
+      this.toastr.info(message, title)
+  }
+  showWarning(message, title){
+      this.toastr.warning(message, title)
+  } 
+}
+  ```
 

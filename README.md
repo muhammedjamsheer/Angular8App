@@ -4,11 +4,9 @@
 | 2  |[Toaster Notification](#Toaster_Notification)  |
 | 3  |[Create Dummy Database using JSON Server](#Create_Dummy_Database)  |
 
-
-## Install bootsrap
 <span id="Install_Bootsrap">
+## Install bootsrap
 Go to your command-line interface and install Bootstrap 4 via npm as follows:
-
  ```html
   npm install --save bootstrap
 ``` 

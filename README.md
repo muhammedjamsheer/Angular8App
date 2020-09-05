@@ -44,4 +44,10 @@ include Bootstrap files from node_modules/bootstrap using the index.html file.
 </html>
 ```
 
+#### Method 3
+We can also use the styles.css file to add the CSS file of Bootstrap to our project.
+ ```html
+@import "~bootstrap/dist/css/bootstrap.css"
+```
+
 

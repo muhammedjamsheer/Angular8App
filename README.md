@@ -59,6 +59,7 @@ We can also use the styles.css file to add the CSS file of Bootstrap to our proj
 
 <span id="Toaster_Notification">
    [Ready, set, GO!](#Install_Bootsrap)
+  
 ## Toaster Notification in Angular 8
 #### Step 1 : Install Toastr
  ```html

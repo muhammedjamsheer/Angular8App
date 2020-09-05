@@ -71,7 +71,7 @@ Open the angular.json file of your project and include:
 #### Step 2 : Import Module
 In this step, we need to import ToastrModule and BrowserAnimationsModule to app.module.ts file
 ###### src/app/app.module.ts
- ```html
+ ```javascript
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
   
@@ -146,4 +146,39 @@ Now here, we will updated our html file. we will create simple four buttons for 
 <button (click)="showToasterWarning()">
     Warning Toaster
 </button>
+```
+
+#### Step 4 : Use Component ts File
+Now we need to update our component.ts file here we will use notification service and call alert.
+###### src/app/app.component.ts
+```javascript
+import { Component } from '@angular/core';
+
+import { NotificationService } from './notification.service'
+  
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  
+  constructor(private notifyService : NotificationService) { }
+  
+  showToasterSuccess(){
+      this.notifyService.showSuccess("Data shown successfully !!", "ItSolutionStuff.com")
+  }
+  
+  showToasterError(){
+      this.notifyService.showError("Something is wrong", "ItSolutionStuff.com")
+  }
+  
+  showToasterInfo(){
+      this.notifyService.showInfo("This is info", "ItSolutionStuff.com")
+  }
+  
+  showToasterWarning(){
+      this.notifyService.showWarning("This is warning", "ItSolutionStuff.com")
+  }
+}
 ```

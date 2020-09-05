@@ -57,6 +57,8 @@ We can also use the styles.css file to add the CSS file of Bootstrap to our proj
 ```
 </span>
 
+<span id="Toaster_Notification">
+  
 ## Toaster Notification in Angular 8
 #### Step 1 : Install Toastr
  ```html
@@ -189,6 +191,7 @@ export class AppComponent {
   }
 }
 ```
+<span>
 
 ## Create Dummy Database using JSON Server
 Run the below command in the terminal.

@@ -190,7 +190,7 @@ Run the below command in the terminal.
  npm install Json-server 
  ```
  Now place data.json file in folder db.json with following data:
- ```html
+ ```javascript
   {
 "students": [
     {
@@ -218,7 +218,7 @@ You can run server response by running following NPM command:
 In package.json, add the below code to run json-server with short code.
 
 "json:server": "json-server --watch db.json",
-  ```html
+  ```javascript
 "scripts": {
   "ng": "ng",
   "start": "ng serve",

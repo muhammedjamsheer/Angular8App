@@ -99,7 +99,7 @@ export class AppModule { }
 Here, we will create separate notification for Toastr. so you can use showSuccess(), showError(), showInfo() and showWarning() in any component.
 
 ###### src/app/notification.service.ts
-  ```html
+```javascript
 import { Injectable } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 
@@ -123,5 +123,27 @@ export class NotificationService {
       this.toastr.warning(message, title)
   } 
 }
-  ```
+```
 
+#### Step 4 : Updated View File
+
+Now here, we will updated our html file. we will create simple four buttons for alert messages.
+
+###### src/app/app.component.html
+```html
+<button (click)="showToasterSuccess()">
+    Success Toaster
+</button>
+  
+<button (click)="showToasterError()">
+    Error Toaster
+</button>
+  
+<button (click)="showToasterInfo()">
+    Info Toaster
+</button>
+  
+<button (click)="showToasterWarning()">
+    Warning Toaster
+</button>
+```

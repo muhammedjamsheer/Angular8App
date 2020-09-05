@@ -182,3 +182,59 @@ export class AppComponent {
   }
 }
 ```
+
+## Create Dummy Database using JSON Server
+Run the below command in the terminal.
+
+```html
+ npm install Json-server 
+ ```
+ Now place data.json file in folder db.json with following data:
+ ```html
+  {
+"students": [
+    {
+      "id": 1,
+      "name": "Enola Rowe",
+      "class": "tony@mcu.com",
+      "address": "131 Oswaldo Street"
+    },{
+      "id": 2,
+      "name": "Timmothy Lueilwitz",
+      "age": "15",
+      "address": "37137 Abbigail Lock"
+    }
+  ]
+} 
+ ```
+ Running the server in two ways
+
+#### 1. Direct Command execution
+You can run server response by running following NPM command:
+ ```html
+ json-server --watch db.json
+ ```
+ #### 2. Adding json file manually in package.json
+In package.json, add the below code to run json-server with short code.
+
+"json:server": "json-server --watch db.json",
+  ```html
+"scripts": {
+  "ng": "ng",
+  "start": "ng serve",
+  "build": "ng build",
+  "json:server": "json-server --watch db.json",
+  "test": "ng test",
+  "lint": "ng lint",
+  "e2e": "ng e2e"
+}, 
+ ```
+ 
+ Now, run the server
+ ```html
+ npm run json:server 
+ ```
+Your JSON Server will be running on port 3000. The below data will be shown in the terminal
+
+http://localhost:3000/students
+ 

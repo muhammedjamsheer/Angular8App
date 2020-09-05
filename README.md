@@ -57,9 +57,6 @@ We can also use the styles.css file to add the CSS file of Bootstrap to our proj
 ```
 </span>
 
-<span id="Toaster_Notification">
-   [Ready, set, GO!](#Install_Bootsrap)
-  
 ## Toaster Notification in Angular 8
 #### Step 1 : Install Toastr
  ```html
@@ -250,3 +247,5 @@ Your JSON Server will be running on port 3000. The below data will be shown in t
 
 http://localhost:3000/students
  <span>
+  
+  <a href='#Toaster_Notification' id='installation-guide' class='anchor' aria-hidden='true'>Installation guide</a>

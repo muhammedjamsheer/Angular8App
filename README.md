@@ -148,7 +148,7 @@ Now here, we will updated our html file. we will create simple four buttons for 
 </button>
 ```
 
-#### Step 4 : Use Component ts File
+#### Step 5 : Use Component ts File
 Now we need to update our component.ts file here we will use notification service and call alert.
 ###### src/app/app.component.ts
 ```javascript
